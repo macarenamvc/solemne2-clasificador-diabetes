@@ -422,8 +422,6 @@ if clasificar:
         st.error(
             f"""
             **Predicción del modelo:** Diabetes / mayor riesgo estimado 
-            
-            **Probabilidad estimada de diabetes (por el modelo):** {probabilidad:.2%}
     
             **Recomendación:** este caso debería ser priorizado para evaluación preventiva o revisión clínica,
             especialmente si presenta valores altos de glucosa, IMC o antecedentes familiares.
@@ -434,21 +432,15 @@ if clasificar:
         st.success(
             f"""
             **Predicción del modelo:** No diabetes / menor riesgo estimado 
-
-            **Probabilidad estimada de diabetes (por el modelo):** {probabilidad:.2%}
     
             **Recomendación:** el modelo no clasifica este caso como de alto riesgo. De todas formas,
-            se recomienda mantener controles preventivos y monitoreo de hábitos saludables.
+            se recomienda mantener seguimiento preventivo y monitoreo de factores de riesgo.
             """,
             icon="✅"
         )
         
     st.caption(
-        "La probabilidad corresponde a una estimación del modelo académico y no debe interpretarse como diagnóstico médico."
-    )
-
-    st.caption(
-        "En árboles de decisión, distintos casos pueden compartir la misma probabilidad si caen en la misma hoja del árbol."
+        "La predicción corresponde a una estimación del modelo académico y no debe interpretarse como diagnóstico médico."
     )
 
     with st.expander("Ver datos ingresados"):
