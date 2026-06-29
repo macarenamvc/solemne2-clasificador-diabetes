@@ -185,20 +185,29 @@ modelo, metricas, matriz, importancias, X_test, y_test = entrenar_modelo(df)
 # Encabezado
 # =============================================================================
 st.title("Clasificador de riesgo de diabetes")
-st.caption("Solemne 2 · Taller de Aplicaciones · Visualización del clasificador desarrollado en la Solemne 1")
+
+st.caption(
+    "Solemne 2 · Taller de Aplicaciones · Visualización interactiva del clasificador"
+)
 
 st.markdown(
     """
-    Esta aplicación muestra los principales resultados del clasificador desarrollado sobre el dataset de diabetes
+    Esta aplicación presenta los principales resultados del clasificador desarrollado sobre el dataset de diabetes
     y permite probar el modelo ingresando manualmente los datos de una persona.
-
-    El modelo utilizado es un **Árbol de Decisión** con imputación por mediana, escalamiento y ajuste por desbalance
-    de clases mediante `class_weight='balanced'`.
     """
 )
 
 st.info(
-    "Nota: esta aplicación tiene fines académicos. La predicción del modelo no constituye diagnóstico médico."
+    """
+    Modelo utilizado: **Árbol de Decisión**  
+
+    El clasificador se presenta mediante métricas de desempeño, matriz de confusión,
+    variables relevantes y una prueba interactiva con nuevos datos.
+    """
+)
+
+st.warning(
+    "Nota: esta aplicación tiene fines académicos. La predicción corresponde a una salida del modelo y no constituye diagnóstico médico."
 )
 
 # =============================================================================
